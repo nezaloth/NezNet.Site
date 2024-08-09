@@ -186,12 +186,12 @@ main img {
     max-width:100%;
 }
 
-main input, textarea, select, button {
-    background: var(--block);
+main input, textarea, select, button { 
+    background: var(--block);  
     color: var(--color);
-    font: 1rem var(--bodyfont);
-    border: 1px solid;
-    padding: 8px;
+    font: 1rem var(--bodyfont); 
+    border: 1px solid; 
+    padding: 8px; 
     margin: 2px;
 }
 
@@ -231,7 +231,7 @@ main input, textarea, select, button {
     z-index:1000;
     padding:5px;
 }
-
+ 
 #skip a:focus {
     top: 0;
     transition:top 0.5s ease;
@@ -252,7 +252,7 @@ main input, textarea, select, button {
         flex: 1 1 calc(25% - 20px);
         margin-top:10px;
     }
-
+    
     /* Sticky sidebar */
     #sidebar-content {
         position:sticky;
@@ -281,7 +281,7 @@ main input, textarea, select, button {
     main section {
         margin:0;
     }
-
+    
     #main-footer {
         flex: 1 1 calc(100% - 40px);
     }
@@ -325,15 +325,73 @@ main input, textarea, select, button {
 <main id="content">
 <!-- Section tags must be used for blocks -->
 <section class="full">
-<h1><b>Welcome To NezNet!</b></h1>
-<p>Nezaloth's personal blog/information center containing a range of any and all of my personal interests!</p>
+<h1><b>Main title</b></h1>
+<p>First paragraph.</p>
 
-<p><a href="https://github.com/nezaloth/NezNet.Site">Please report any site problems or suggestions here on my github!</a> Or copy and edit the code for any of your own purposes if you wish.</p>
+<p>Second paragraph with a <a href="">link</a> and more text</p>
 </section>
 
 <section class="full">
-<h2><b>Who Am I?</b></h2>
-<p>I'm Nezaloth or Nez, I go by she/her and are transgender. My interests include zoology, geology, programming and CGI. Read more on my about me page, found <a href="about-me.html">here</a>.</p>
+<h2><b>Full-width section</b></h2>
+<p>This is a full width section write whatever you want here.</p>
+</section>
+
+<section class="half">
+<h2><b>Half-width section</b></h2>
+<p>This is a half-width section. All sections, regardless of their grid size, will take up the entire screen width on small screens (under 1024px wide). </p>
+</section>
+
+<section class="quarter">
+<h2><b>Quarter-width section</b></h2>
+<p>This is a quarter-width section. </p>
+</section>
+
+<section class="quarter">
+<h2><b>Quarter-width section</b></h2>
+<p>You can use 2 of these with a half-width section or 1 with a 3/4 width section.</p>
+</section>
+
+<section class="third">
+<h2><b>Third-width section</b></h2>
+<p>This is a third-width section.</p>
+<ul>
+    <li>This</li>
+    <li>is</li>
+    <li>a</li>
+    <li>list
+    <ul>
+        <li>List</li>
+        <li>inside</li>
+        <li>of</li>
+        <li>list</li>
+    </ul></li>
+</ul>
+</section>
+
+<section class="twothird">
+<h2><b>2/3-width section</b></h2>
+<p>This is a 2/3-width section. <a href="">This is a link.</a></li>
+<p><input type="text" value="Input" /></p>
+<p><select>
+    <option selected>Selection</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+</select></p>
+<p><textarea>Textarea</textarea></p>
+<p><button type="button">Button</button></p>
+</section>
+
+<section class="threequarter">
+<h2><b>3/4-width section</b></h2>
+<h3>Header 3</h3>
+<h4>Header 4</h4>
+<p>This is a 3/4-width section.</p>
+</section>
+
+<section class="quarter">
+<h2><b>Quarter-width section</b></h2>
+<p>Are you bored yet?</p>
 </section>
 
 <footer id="main-footer">

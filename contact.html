@@ -58,7 +58,7 @@ body {
     color:var(--color);
 }
 
-/* Rounded corners - feel free to get rid of this or change it */
+/* Rounded corners */
 
 main section, #sidebar-content, #main-footer {
     border-radius:5px;
@@ -90,12 +90,12 @@ main section, #sidebar-content, #main-footer {
 }
 
 .icon img {
-    border-radius:100%; /* This makes the icon a circle - feel free to remove or reduce for a rectangle or square */
-    max-width:150px; /* This can be changed to make the icon smaller; you might have to mess with the border radius too */
+    border-radius:100%; /* This makes the icon a circle */
+    max-width:150px; /* This can be changed to make the icon smaller */
 }
 
 .photo img {
-    border-radius:5px; /* This makes the icon a circle - feel free to remove or reduce for a rectangle or square */
+    border-radius:5px; /* This rounds image corners */
 }
 
 /* Styling for the menu */
@@ -186,12 +186,12 @@ main img {
     max-width:100%;
 }
 
-main input, textarea, select, button { 
-    background: var(--block);  
+main input, textarea, select, button {
+    background: var(--block);
     color: var(--color);
-    font: 1rem var(--bodyfont); 
-    border: 1px solid; 
-    padding: 8px; 
+    font: 1rem var(--bodyfont);
+    border: 1px solid;
+    padding: 8px;
     margin: 2px;
 }
 
@@ -231,7 +231,7 @@ main input, textarea, select, button {
     z-index:1000;
     padding:5px;
 }
- 
+
 #skip a:focus {
     top: 0;
     transition:top 0.5s ease;
@@ -252,8 +252,8 @@ main input, textarea, select, button {
         flex: 1 1 calc(25% - 20px);
         margin-top:10px;
     }
-    
-    /* Remove or comment out this block if you don't want a sticky sidebar */
+
+    /* Sticky sidebar */
     #sidebar-content {
         position:sticky;
         top:10px;
@@ -281,7 +281,7 @@ main input, textarea, select, button {
     main section {
         margin:0;
     }
-    
+
     #main-footer {
         flex: 1 1 calc(100% - 40px);
     }
@@ -305,7 +305,7 @@ main input, textarea, select, button {
 <div id="container">
 <div id="sidebar">
 <div id="sidebar-content">
-<!-- An image can go here if you'd like, or just delete this line if you don't. It doesn't matter what size it is as long as it's square. -->
+<!-- Profile picture image -->
 <div class="icon"><img src="pfp.png" alt="Profile picture" /></div>
 <header><b>NezNet.Site</b></header>
 
