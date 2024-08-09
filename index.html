@@ -2,14 +2,41 @@
 <html lang="en" >
 <head>
 
+<script>
+// Prevent variables from being global
+(function () {
+
+      /*
+          1. Inject CSS which makes iframe invisible
+      */
+
+    var div = document.createElement('div'),
+        ref = document.getElementsByTagName('base')[0] ||
+              document.getElementsByTagName('script')[0];
+
+    div.innerHTML = '&shy;<style> iframe { visibility: hidden; } </style>';
+
+    ref.parentNode.insertBefore(div, ref);
+
+
+    /*
+        2. When window loads, remove that CSS,
+           making iframe visible again
+    */
+
+    window.onload = function() {
+        div.parentNode.removeChild(div);
+    }
+
+})();
+</script>
+
 <title>NezNet.Site</title>
 
 <link rel="icon" type="image/png" href="https://nezaloth.github.io/NezNet.Site/images/universal/logo.png" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
-
-<iframe src="..." style="visibility:hidden;" onload="this.style.visibility='visible';"></iframe>
 
 <style>
 /* The following CSS applies on all screen sizes */
