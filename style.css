@@ -254,7 +254,7 @@ main input, textarea, select, button {
     }
 
     #sidebar {
-        flex: 1 1 calc(25% - 20px);
+        flex: 1 1 calc(20% - 20px);
         margin-top:10px;
     }
 
@@ -277,7 +277,7 @@ main input, textarea, select, button {
     }
 
     main {
-        flex: 1 1 calc(75% - 30px);
+        flex: 1 1 calc(80% - 30px);
         display:flex;
         flex-wrap:wrap;
         gap:10px;
