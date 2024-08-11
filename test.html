@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+<title>NezNet.Site</title>
+
+<link rel="icon" type="image/png" href="images/universal/logo.png" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<script src="/NezNet.Site/libraries/include-html.js"></script>
+
+<!-- Imports stylesheet -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- Please don't remove the next 2 lines! -->
+<div id="top"></div>
+<div id="skip"><a href="#content">Skip to content</a></div>
+
+<div id="container">
+<div id="sidebar">
+<div id="sidebar-content">
+<!-- Profile picture image -->
+<div class="icon"><img src="images/universal/pfp.png" alt="Profile picture" /></div>
+<div include-html="main-menu/site-name.html"></div>
+
+<!-- Navigation menu  -->
+<nav id="main-menu">
+<ul>
+    <div include-html="main-menu/links.html"></div>
+</ul>
+</nav>
+    <div include-html="main-menu/site-message.html"></div>
+</div>
+</div>
+
+<!-- Content area -->
+<main id="content">
+<!-- Section tags must be used for blocks -->
+<section class="full">
+<h1><b>Welcome To NezNet!</b></h1>
+<p>Nezaloth's personal blog/information center containing a range of any and all of my personal interests!</p>
+
+<p><a href="https://github.com/nezaloth/NezNet.Site">Please report any site problems or suggestions here on my github!</a> Or copy and edit the code for any of your own purposes if you wish.</p>
+</section>
+
+<section class="full">
+<h2><b>Who Am I?</b></h2>
+<p>I'm Nezaloth or Nez, I go by she/her and are transgender. My interests include zoology, geology, programming and CGI. Read more on my about me page, found <a href="about-me/about-me.html">here</a>.</p>
+</section>
+
+<section class="twothird">
+<h2><b>Transgender Resources</b></h2>
+<p>My collection of useful guides and factual resources for anything transgender can be found <a href="transgender-resources/transgender-resources.html">here</a>.</p>
+</section>
+
+<section class="third">
+<h2><b>Site Template</b></h2>
+<p>The site template and source code is available <a href="template/template.html">here</a>.</p>
+</section>
+
+<footer id="main-footer">
+<p>Updated 11/8/2024</p>
+<div include-html="footer/links.html"></div>
+</footer>
+</main>
+</div>
+
+<script>
+includeHTML();
+</script>
+</body>
+</html>
