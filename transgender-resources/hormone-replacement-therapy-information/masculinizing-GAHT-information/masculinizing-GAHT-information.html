@@ -2,346 +2,15 @@
 <html lang="en">
 <head>
 
-<script>
-// Prevent variables from being global
-(function () {
-
-      /*
-          1. Inject CSS which makes iframe invisible
-      */
-
-    var div = document.createElement('div'),
-        ref = document.getElementsByTagName('base')[0] ||
-              document.getElementsByTagName('script')[0];
-
-    div.innerHTML = '&shy;<style> iframe { visibility: hidden; } </style>';
-
-    ref.parentNode.insertBefore(div, ref);
-
-
-    /*
-        2. When window loads, remove that CSS,
-           making iframe visible again
-    */
-
-    window.onload = function() {
-        div.parentNode.removeChild(div);
-    }
-
-})();
-</script>
-
 <title>NezNet.Site</title>
 
-<link rel="icon" type="image/png" href="https://nezaloth.github.io/NezNet.Site/images/universal/logo.png" />
+<link rel="icon" type="image/png" href="../../../images/universal/logo.png" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 
-<style>
-/* The following CSS applies on all screen sizes */
-
-/* Colors and fonts */
-:root {
-    /* Fonts */
-    --bodyfont: Hack;
-    --headerfont: Hack;
-
-    /* Main colors */
-    --background:#441750; /* Page background */
-    --color:#dcdfe4;
-    --block:rgba(12, 14, 15, 0.3); /* Background color for the grid blocks in the content */
-
-    --link:#d900ff;
-    --linkhover:#ff00ff;
-
-    --h1:#dcdfe4;
-    --h2:#dcdfe4;
-    --h3:#dcdfe4;
-    --h4:#dcdfe4;
-
-    /* Sidebar colors */
-    --sidebar:rgba(12, 14, 15, 0.3);
-    --sidebarcolor:#dcdfe4;
-    --title: #dcdfe4;
-    --sidebarlink: #d900ff;
-    --sidebarlinkhover:#ff00ff;
-
-    /* Menu colors */
-    --menubg:rgba(44, 26, 48, 0.5);
-    --menucolor:#d900ff;
-    --menubghover:#ff00ff;
-    --menucolorhover:rgba(12, 14, 15, 0.3);
-}
-
-* { margin:0; padding:0; }
-
-/* Main body styling */
-body {
-    background-image: url('images/universal/background.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-attachment:fixed;
-    font:1rem Hack;
-    color:var(--color);
-}
-
-/* Rounded corners */
-
-main section, #sidebar-content, #main-footer {
-    border-radius:5px;
-}
-
-/* Sidebar styling */
-
-#sidebar-content {
-    text-align:center;
-    background: var(--sidebar);
-    color: var(--sidebarcolor);
-    padding:10px;
-}
-
-#sidebar-content header {
-    color:var(--title);
-    font:1.8em var(--headerfont);
-    margin:8px;
-}
-
-#sidebar-content p a {
-    color:var(--sidebarlink);
-    transition:0.5s ease;
-}
-
-#sidebar-content p a:hover {
-    color:var(--sidebarlinkhover);
-    transition:0.5s ease;
-}
-
-.icon img {
-    border-radius:100%; /* This makes the icon a circle */
-    max-width:150px; /* This can be changed to make the icon smaller */
-}
-
-/* Styling for photos */
-
-.photo img {
-    border-radius:5px; /* This rounds image corners */
-}
-
-/* Styling for tables */
-
-table {
-  border-collapse: separate;
-  width: 100%;
-  border: 1px solid #dcdfe4;
-  border-radius:5px;
-}
-
-td {
-  text-align: center;
-}
-
-tr:hover {background-color: #7f00ff;}
-
-/* Styling for the menu */
-
-#main-menu {
-    font:1.1em var(--headerfont);
-    width:100%;
-}
-
-#main-menu ul {
-    list-style:none;
-}
-
-#main-menu li a {
-    padding:7px;
-    background:var(--menubg);
-    color:var(--menucolor);
-    text-decoration:none;
-    transition:0.5s ease;
-}
-
-#main-menu li a:hover, #main-menu li a:focus {
-    background: var(--menubghover);
-    color:var(--menucolorhover);
-    transition:0.5s ease;
-}
-
-/* Content styling */
-
-main {
-    margin-top:10px;
-}
-
-/* Styling for blocks */
-
-main section, #main-footer {
-    padding:15px;
-    background:var(--block);
-    margin-bottom:10px;
-}
-
-main h1 {
-    font:1.8em var(--headerfont);
-    color:var(--h1);
-}
-
-main h2 {
-    font:1.5em var(--headerfont);
-    color:var(--h2);
-}
-
-main h3 {
-    font:1.3em var(--headerfont);
-    color:var(--h3);
-}
-
-main h4 {
-    font:1em var(--headerfont);
-    font-style:italic;
-    color:var(--h4);
-}
-
-p {
-    line-height:1.5;
-    margin:10px 0 10px 0;
-}
-
-main a {
-    color:var(--link);
-    transition:0.5s ease;
-}
-
-main a:hover, main a:focus {
-    color:var(--linkhover);
-    transition:0.5s ease;
-}
-
-main ul {
-    list-style-position: outside;
-    margin-left: 25px;
-}
-
-main ul li {
-    line-height:1.5;
-}
-
-main img {
-    max-width:100%;
-}
-
-main input, textarea, select, button { 
-    background: var(--block);  
-    color: var(--color);
-    font: 1rem var(--bodyfont); 
-    border: 1px solid; 
-    padding: 8px; 
-    margin: 2px;
-}
-
-#main-footer {
-    text-align:center;
-}
-
-/* The following CSS ONLY applies to mobile/small screens */
-
-/* Container styling */
-#container {
-    width: calc(100% - 20px);
-    padding:10px;
-    margin-top:10px;
-}
-
-#sidebar-content {
-    width: calc(100% - 20px);
-}
-
-#main-menu li {
-    margin-bottom:15px;
-    display:inline-block;
-}
-
-/* Skip to content button */
-
-#skip a {
-    position:absolute;
-    display:inline-block;
-    left:0px;
-    top:-1000px;
-    overflow:hidden;
-    transition:top 0.5s ease;
-    background:var(--block);
-    color:var(--link);
-    z-index:1000;
-    padding:5px;
-}
- 
-#skip a:focus {
-    top: 0;
-    transition:top 0.5s ease;
-}
-
-/* The following CSS ONLY applies to desktop/big screens */
-
-@media screen and (min-width: 800px) {
-    #container {
-        max-width:950px;
-        width:90%;
-        margin:25px auto;
-        display:flex;
-        gap:20px;
-    }
-
-    #sidebar {
-        flex: 1 1 calc(25% - 20px);
-        margin-top:10px;
-    }
-    
-    /* Sticky sidebar */
-    #sidebar-content {
-        position:sticky;
-        top:10px;
-    }
-
-    /* Make menu links into a column */
-
-    #main-menu li {
-        display:block;
-        margin:0;
-    }
-
-    #main-menu li a {
-        display:block;
-        border-bottom:1px solid;
-    }
-
-    main {
-        flex: 1 1 calc(75% - 30px);
-        display:flex;
-        flex-wrap:wrap;
-        gap:10px;
-    }
-
-    main section {
-        margin:0;
-    }
-    
-    #main-footer {
-        flex: 1 1 calc(100% - 40px);
-    }
-
-    /* Defining grid blocks */
-
-    .full { flex: 1 1 calc(100% - 40px);}
-    .half { flex: 1 1 calc(50% - 40px); }
-    .third { flex: 1 1 calc(33% - 40px); }
-    .twothird { flex: 1 1 calc(66% - 40px); }
-    .quarter { flex: 1 1 calc(25% - 40px); }
-    .threequarter { flex: 1 1 calc(75% - 40px); }
-}
-</style>
+<!-- Imports stylesheet -->
+<link rel="stylesheet" href="../../../style.css">
 </head>
 <body>
 <!-- Please don't remove the next 2 lines! -->
@@ -352,15 +21,16 @@ main input, textarea, select, button {
 <div id="sidebar">
 <div id="sidebar-content">
 <!-- Profile picture image -->
-<div class="icon"><img src="images/universal/pfp.png" alt="Profile picture" /></div>
+<div class="icon"><img src="../../../images/universal/pfp.png" alt="Profile picture" /></div>
 <header><b>NezNet.Site</b></header>
 
 <!-- Navigation menu  -->
 <nav id="main-menu">
 <ul>
-    <li><a href="index.html">Main Menu</a></li>
-    <li><a href="about-me.html">About Me</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="../../../index.html">Main Menu</a></li>
+    <li><a href="../../../about-me/about-me.html">About Me</a></li>
+    <li><a href="../../../transgender-resources/transgender-resources.html">Trans Resources</a></li>
+    <li><a href="../../../contact/contact.html">Contact</a></li>
 </ul>
 </nav>
 <p>SITE UNDER CONSTRUCTION PLEASE BE PATIENT!</p>
@@ -483,7 +153,7 @@ main input, textarea, select, button {
 
 <footer id="main-footer">
 <p>Updated 11/8/2024</p>
-<p><a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span> <a href="index.html">Back to main menu</a></p>
+<p><a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span> <a href="../../../index.html">Back to main menu</a></p>
 </footer>
 </main>
 </div>
