@@ -9,7 +9,7 @@
     /* Main colors */
     --background:#441750; /* Page background */
     --color:#dcdfe4;
-    --block:rgba(12, 14, 15, 0.3); /* Background color for the grid blocks in the content */
+    --block:rgba(12, 14, 15, 0.5); /* Background color for the grid blocks in the content */
 
     --link:#d900ff;
     --linkhover:#ff00ff;
@@ -20,7 +20,7 @@
     --h4:#dcdfe4;
 
     /* Sidebar colors */
-    --sidebar:rgba(12, 14, 15, 0.3);
+    --sidebar:rgba(12, 14, 15, 0.5);
     --sidebarcolor:#dcdfe4;
     --title: #dcdfe4;
     --sidebarlink: #d900ff;
@@ -30,7 +30,7 @@
     --menubg:rgba(44, 26, 48, 0.5);
     --menucolor:#d900ff;
     --menubghover:#ff00ff;
-    --menucolorhover:rgba(12, 14, 15, 0.3);
+    --menucolorhover:rgba(12, 14, 15, 0.5);
 }
 
 * { margin:0; padding:0; }
