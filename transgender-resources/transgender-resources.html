@@ -9,9 +9,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 
+<script src="/NezNet.Site/libraries/include-html.js"></script>
+
 <!-- Imports stylesheet -->
 <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
 <!-- Please don't remove the next 2 lines! -->
 <div id="top"></div>
@@ -22,18 +25,15 @@
 <div id="sidebar-content">
 <!-- Profile picture image -->
 <div class="icon"><img src="../images/universal/pfp.png" alt="Profile picture" /></div>
-<header><b>NezNet.Site</b></header>
+<div include-html="../main-menu/site-name.html"></div>
 
 <!-- Navigation menu  -->
-<nav id="main-menu">
+<nav id="../main-menu">
 <ul>
-    <li><a href="../index.html">Main Menu</a></li>
-    <li><a href="../about-me/about-me.html">About Me</a></li>
-    <li><a href="transgender-resources.html">Trans Resources</a></li>
-    <li><a href="../contact/contact.html">Contact</a></li>
+    <div include-html="../main-menu/links.html"></div>
 </ul>
 </nav>
-<p>SITE UNDER CONSTRUCTION PLEASE BE PATIENT!</p>
+    <div include-html="../main-menu/site-message.html"></div>
 </div>
 </div>
 
@@ -71,10 +71,14 @@
 </section>
 
 <footer id="main-footer">
-<p>Updated 11/8/2024</p>
-<p><a href="#top">Back to top</a> <span aria-hidden="true">&bull;</span> <a href="../index.html">Back to main menu</a></p>
+<p>Updated 12/8/2024</p>
+<div include-html="../footer/links.html"></div>
 </footer>
 </main>
 </div>
+
+<script>
+includeHTML();
+</script>
 </body>
 </html>

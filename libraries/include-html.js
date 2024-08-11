@@ -1,3 +1,4 @@
+/*function to allow HTML files to be included in one another*/
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
