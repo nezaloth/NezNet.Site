@@ -50,12 +50,20 @@ function includeHTML() {
 
 <div id="container">
 <div id="sidebar">
-<div w3-include-html="sidebar.html"></div>
-</div>
+<div id="sidebar-content">
+<!-- Profile picture image -->
+<div class="icon"><img src="images/universal/pfp.png" alt="Profile picture" /></div>
+<div w3-include-html="site-name.html"></div>
 
-<script>
-includeHTML();
-</script>
+<!-- Navigation menu  -->
+<nav id="main-menu">
+<ul>
+    <div w3-include-html="links.html"></div>
+</ul>
+</nav>
+    <div w3-include-html="site-message.html"></div>
+</div>
+</div>
 
 <!-- Content area -->
 <main id="content">
@@ -88,5 +96,9 @@ includeHTML();
 </footer>
 </main>
 </div>
+
+<script>
+includeHTML();
+</script>
 </body>
 </html>
