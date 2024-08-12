@@ -1,125 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <title>NezNet.Site</title>
 
-<title>NezNet.Site</title>
+    <link rel="icon" type="image/png" href="../images/universal/logo.png" />
 
-<link rel="icon" type="image/png" href="../images/universal/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
+    <script src="/NezNet.Site/libraries/include-html.js"></script>
 
-<script src="/NezNet.Site/libraries/include-html.js"></script>
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+  </head>
 
-<!-- Imports stylesheet -->
-<link rel="stylesheet" href="../style.css">
-</head>
+  <body>
+    <!-- Please don't remove the next 2 lines! -->
+    <div id="top"></div>
+    <div id="skip"><a href="#content">Skip to content</a></div>
 
-<body>
-<!-- Please don't remove the next 2 lines! -->
-<div id="top"></div>
-<div id="skip"><a href="#content">Skip to content</a></div>
+    <div id="container">
+      <div id="sidebar">
+        <div id="sidebar-content">
+          <!-- Profile picture image -->
+          <div class="icon"><img src="../images/universal/pfp.png" alt="Profile picture" /></div>
+          <div include-html="../main-menu/site-name.html"></div>
 
-<div id="container">
-<div id="sidebar">
-<div id="sidebar-content">
-<!-- Profile picture image -->
-<div class="icon"><img src="../images/universal/pfp.png" alt="Profile picture" /></div>
-<div include-html="../main-menu/site-name.html"></div>
+          <!-- Navigation menu  -->
+          <nav id="main-menu">
+            <ul>
+              <div include-html="../main-menu/links.html"></div>
+            </ul>
+          </nav>
+          <div include-html="../main-menu/site-message.html"></div>
+        </div>
+      </div>
 
-<!-- Navigation menu  -->
-<nav id="main-menu">
-<ul>
-    <div include-html="../main-menu/links.html"></div>
-</ul>
-</nav>
-    <div include-html="../main-menu/site-message.html"></div>
-</div>
-</div>
+      <!-- Content area -->
+      <main id="content">
+        <!-- Section tags must be used for blocks -->
+        <section class="full">
+          <h1><b>Site Template</b></h1>
+          <p>Feel free to copy and use this site template for any personal projects!</p>
+          <p>Find the source code for this webpage on the site github: <a href="https://github.com/nezaloth/NezNet.Site/blob/main/template.html">https://github.com/nezaloth/NezNet.Site/blob/main/template.html</a></p>
+          <p>In order to work correctly the template also needs <a href="https://github.com/nezaloth/NezNet.Site/blob/main/style.css">style.css</a>, the <a       href="https://  github.com/nezaloth/NezNet.Site/tree/main/libraries">libraries folder</a>, <a href="https://github.com/nezaloth/NezNet.Site/tree/main/main-menu">main-menu folder</a> and <a href="https://github.com/nezaloth/NezNet.Site/tree/main/footer">footer folder</a></p>
+        </section>
 
-<!-- Content area -->
-<main id="content">
-<!-- Section tags must be used for blocks -->
-<section class="full">
-<h1><b>Site Template</b></h1>
-<p>Feel free to copy and use this site template for any personal projects!</p>
+        <section class="full">
+          <h2><b>Full-width section</b></h2>
+          <p>This is a full width section write whatever you want here.</p>
+        </section>
 
-<p>Find the source code for this webpage on the site github: <a href="https://github.com/nezaloth/NezNet.Site/blob/main/template.html">https://github.com/nezaloth/NezNet.Site/blob/main/template.html</a></p>
-<p>In order to work correctly the template also needs <a href="https://github.com/nezaloth/NezNet.Site/blob/main/style.css">style.css</a>, the <a href="https://github.com/nezaloth/NezNet.Site/tree/main/libraries">libraries folder</a>, <a href="https://github.com/nezaloth/NezNet.Site/tree/main/main-menu">main-menu folder</a> and <a href="https://github.com/nezaloth/NezNet.Site/tree/main/footer">footer folder</a></p>
-</section>
+        <section class="half">
+          <h2><b>Half-width section</b></h2>
+          <p>This is a half-width section. All sections, regardless of their grid size, will take up the entire screen width on small screens (under 1024px wide). </p>
+        </section>
 
-<section class="full">
-<h2><b>Full-width section</b></h2>
-<p>This is a full width section write whatever you want here.</p>
-</section>
+        <section class="quarter">
+          <h2><b>Quarter-width section</b></h2>
+          <p>This is a quarter-width section. </p>
+        </section>
 
-<section class="half">
-<h2><b>Half-width section</b></h2>
-<p>This is a half-width section. All sections, regardless of their grid size, will take up the entire screen width on small screens (under 1024px wide). </p>
-</section>
+        <section class="quarter">
+          <h2><b>Quarter-width section</b></h2>
+          <p>You can use 2 of these with a half-width section or 1 with a 3/4 width section.</p>
+        </section>
 
-<section class="quarter">
-<h2><b>Quarter-width section</b></h2>
-<p>This is a quarter-width section. </p>
-</section>
+        <section class="third">
+          <h2><b>Third-width section</b></h2>
+          <p>This is a third-width section.</p>
+          <ul>
+            <li>This</li>
+            <li>is</li>
+            <li>a</li>
+            <li>list
+            <ul>
+              <li>List</li>
+              <li>inside</li>
+              <li>of</li>
+              <li>list</li>
+            </ul></li>
+          </ul>
+        </section>
 
-<section class="quarter">
-<h2><b>Quarter-width section</b></h2>
-<p>You can use 2 of these with a half-width section or 1 with a 3/4 width section.</p>
-</section>
+        <section class="twothird">
+          <h2><b>2/3-width section</b></h2>
+          <p>This is a 2/3-width section. <a href="">This is a link.</a></li>
+          <p><input type="text" value="Input" /></p>
+          <p><select>
+            <option selected>Selection</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select></p>
+          <p><textarea>Text area</textarea></p>
+          <p><button type="button">Button</button></p>
+        </section>
 
-<section class="third">
-<h2><b>Third-width section</b></h2>
-<p>This is a third-width section.</p>
-<ul>
-    <li>This</li>
-    <li>is</li>
-    <li>a</li>
-    <li>list
-    <ul>
-        <li>List</li>
-        <li>inside</li>
-        <li>of</li>
-        <li>list</li>
-    </ul></li>
-</ul>
-</section>
+        <section class="threequarter">
+          <h2><b>3/4-width section</b></h2>
+          <h3>Header 3</h3>
+          <h4>Header 4</h4>
+          <p>This is a 3/4-width section.</p>
+        </section>
 
-<section class="twothird">
-<h2><b>2/3-width section</b></h2>
-<p>This is a 2/3-width section. <a href="">This is a link.</a></li>
-<p><input type="text" value="Input" /></p>
-<p><select>
-    <option selected>Selection</option>
-    <option>Option 1</option>
-    <option>Option 2</option>
-    <option>Option 3</option>
-</select></p>
-<p><textarea>Textarea</textarea></p>
-<p><button type="button">Button</button></p>
-</section>
+        <section class="quarter">
+          <h2><b>Quarter-width section</b></h2>
+          <p>Are you bored yet?</p>
+        </section>
 
-<section class="threequarter">
-<h2><b>3/4-width section</b></h2>
-<h3>Header 3</h3>
-<h4>Header 4</h4>
-<p>This is a 3/4-width section.</p>
-</section>
+        <footer id="main-footer">
+          <p>Updated 12/8/2024</p>
+          <div include-html="../footer/links.html"></div>
+        </footer>
+      </main>
+    </div>
 
-<section class="quarter">
-<h2><b>Quarter-width section</b></h2>
-<p>Are you bored yet?</p>
-</section>
-
-<footer id="main-footer">
-<p>Updated 12/8/2024</p>
-<div include-html="../footer/links.html"></div>
-</footer>
-</main>
-</div>
-
-<script>
-includeHTML();
-</script>
-</body>
+    <script>
+      includeHTML();
+    </script>
+  </body>
 </html>

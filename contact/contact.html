@@ -1,75 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <title>NezNet.Site</title>
 
-<title>NezNet.Site</title>
+    <link rel="icon" type="image/png" href="../images/universal/logo.png" />
 
-<link rel="icon" type="image/png" href="../images/universal/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
+    <script src="/NezNet.Site/libraries/include-html.js"></script>
 
-<script src="/NezNet.Site/libraries/include-html.js"></script>
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+  </head>
 
-<!-- Imports stylesheet -->
-<link rel="stylesheet" href="../style.css">
-</head>
+  <body>
+    <!-- Please don't remove the next 2 lines! -->
+    <div id="top"></div>
+    <div id="skip"><a href="#content">Skip to content</a></div>
 
-<body>
-<!-- Please don't remove the next 2 lines! -->
-<div id="top"></div>
-<div id="skip"><a href="#content">Skip to content</a></div>
+    <div id="container">
+      <div id="sidebar">
+        <div id="sidebar-content">
+          <!-- Profile picture image -->
+          <div class="icon"><img src="../images/universal/pfp.png" alt="Profile picture" /></div>
+          <div include-html="../main-menu/site-name.html"></div>
 
-<div id="container">
-<div id="sidebar">
-<div id="sidebar-content">
-<!-- Profile picture image -->
-<div class="icon"><img src="../images/universal/pfp.png" alt="Profile picture" /></div>
-<div include-html="../main-menu/site-name.html"></div>
+          <!-- Navigation menu  -->
+          <nav id="main-menu">
+            <ul>
+              <div include-html="../main-menu/links.html"></div>
+            </ul>
+          </nav>
+          <div include-html="../main-menu/site-message.html"></div>
+        </div>
+      </div>
 
-<!-- Navigation menu  -->
-<nav id="main-menu">
-<ul>
-    <div include-html="../main-menu/links.html"></div>
-</ul>
-</nav>
-    <div include-html="../main-menu/site-message.html"></div>
-</div>
-</div>
+      <!-- Content area -->
+      <main id="content">
+        <!-- Section tags must be used for blocks -->
+        <section class="full">
+          <h1><b>Contact</b></h1>
+          <p>Here is a list of all my active contacts, feel free to message me about anything you want! Questions, queries or just the occasional small chat!</p>
+          <p>I can't promise a quick reply but I should be able to get back to you after a few days.</p>
+        </section>
 
-<!-- Content area -->
-<main id="content">
-<!-- Section tags must be used for blocks -->
-<section class="full">
-<h1><b>Contact</b></h1>
-<p>Here is a list of all my active contacts, feel free to message me about anything you want! Questions, queries or just the occasional small chat!</p>
-<p>I can't promise a quick reply but I should be able to get back to you after a few days.</p>
-</section>
+        <section class="third">
+          <h2><b>Casual Chats</b></h2>
+          <p>If you'd like to have a chat with me via text you can message me at my discord account: <a href="https://discord.com/users/782165106842140693">https://discord.com/users/782165106842140693</a></p>
+        </section>
 
-<section class="third">
-<h2><b>Casual Chats</b></h2>
-<p>If you'd like to have a chat with me via text you can message me at my discord account: <a href="https://discord.com/users/782165106842140693">https://discord.com/users/782165106842140693</a></p>
-</section>
+        <section class="third">
+          <h2><b>Questions And Information</b></h2>
+          <p>For more serious or sensitive questions/inquiries please send me an email: <a href="mailto:Nezaloth@protonmail.com">Nezaloth@protonmail.com</a></p>
+        </section>
 
-<section class="third">
-<h2><b>Questions And Information</b></h2>
-<p>For more serious or sensitive questions/inquiries please send me an email: <a href="mailto:Nezaloth@protonmail.com">Nezaloth@protonmail.com</a></p>
-</section>
+        <section class="third">
+          <h2><b>Site Issues</b></h2>
+          <p>If you notice any bugs/site issues make sure to fill out a bug report on the site github: <a href="https://github.com/nezaloth/NezNet.Site">https://      github.com/nezaloth/NezNet.Site</a></p>
+        </section>
 
-<section class="third">
-<h2><b>Site Issues</b></h2>
-<p>If you notice any bugs/site issues make sure to fill out a bug report on the site github: <a href="https://github.com/nezaloth/NezNet.Site">https://github.com/nezaloth/NezNet.Site</a></p>
-</section>
+        <footer id="main-footer">
+          <p>Updated 12/8/2024</p>
+          <div include-html="../footer/links.html"></div>
+        </footer>
+      </main>
+    </div>
 
-<footer id="main-footer">
-<p>Updated 12/8/2024</p>
-<div include-html="../footer/links.html"></div>
-</footer>
-</main>
-</div>
-
-<script>
-includeHTML();
-</script>
-</body>
+    <script>
+      includeHTML();
+    </script>
+  </body>
 </html>

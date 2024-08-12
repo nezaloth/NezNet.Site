@@ -1,84 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <title>NezNet.Site</title>
 
-<title>NezNet.Site</title>
+    <link rel="icon" type="image/png" href="../images/universal/logo.png" />
 
-<link rel="icon" type="image/png" href="../images/universal/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
+    <script src="/NezNet.Site/libraries/include-html.js"></script>
 
-<script src="/NezNet.Site/libraries/include-html.js"></script>
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+  </head>
 
-<!-- Imports stylesheet -->
-<link rel="stylesheet" href="../style.css">
-</head>
+  <body>
+    <!-- Please don't remove the next 2 lines! -->
+    <div id="top"></div>
+    <div id="skip"><a href="#content">Skip to content</a></div>
 
-<body>
-<!-- Please don't remove the next 2 lines! -->
-<div id="top"></div>
-<div id="skip"><a href="#content">Skip to content</a></div>
+    <div id="container">
+      <div id="sidebar">
+        <div id="sidebar-content">
+          <!-- Profile picture image -->
+          <div class="icon"><img src="../images/universal/pfp.png" alt="Profile picture" /></div>
+          <div include-html="../main-menu/site-name.html"></div>
 
-<div id="container">
-<div id="sidebar">
-<div id="sidebar-content">
-<!-- Profile picture image -->
-<div class="icon"><img src="../images/universal/pfp.png" alt="Profile picture" /></div>
-<div include-html="../main-menu/site-name.html"></div>
+          <!-- Navigation menu  -->
+          <nav id="main-menu">
+            <ul>
+              <div include-html="../main-menu/links.html"></div>
+            </ul>
+          </nav>
+          <div include-html="../main-menu/site-message.html"></div>
+        </div>
+      </div>
 
-<!-- Navigation menu  -->
-<nav id="main-menu">
-<ul>
-    <div include-html="../main-menu/links.html"></div>
-</ul>
-</nav>
-    <div include-html="../main-menu/site-message.html"></div>
-</div>
-</div>
+      <!-- Content area -->
+      <main id="content">
+        <!-- Section tags must be used for blocks -->
+        <section class="full">
+          <h1><b>Transgender Resources</b></h1>
+          <p>Being trans can be extremely confusing and difficult, the lack of resources and conflicting online information makes researching and finding things out an awfully complicated process.</p>
+          <p>This page aims to be a central hub for knowledge on a variety of different transgender topics, detailing makeup to hormones, tucking to voice   training.</p>
+          <p>Please be aware that, being human I am prone to bias and as someone who is MtF my knowledge transitioning FtM is somewhat limited. Although in order to mitigate this I will try to support my writing with peer reviewed papers as often as possible.</p>
+          <p>Lastly, feel free to email me if you have any suggestions/recommendations to add to this page.</p>
+        </section>
 
-<!-- Content area -->
-<main id="content">
-<!-- Section tags must be used for blocks -->
-<section class="full">
-<h1><b>Transgender Resources</b></h1>
-<p>Being trans can be extremely confusing and difficult, the lack of resources and conflicting online information makes researching and finding things out an awfully complicated process.</p>
-<p>This page aims to be a central hub for knowledge on a variety of different transgender topics, detailing makeup to hormones, tucking to voice training.</p>
-<p>Please be aware that, being human I am prone to bias and as someone who is MtF my knowledge transitioning FtM is somewhat limited. Although in order to mitigate this I will try to support my writing with peer reviewed papers as often as possible.</p>
-<p>Lastly, feel free to email me if you have any suggestions/recommendations to add to this page.</p>
-</section>
+        <section class="twothird">
+          <h2><b>There's a lot of information here, to be trans do I have to listen to all of it?</b></h2>
+          <p>The short answer is no, you don't need to follow all the guides here to be trans. You don't need to tuck or undergo HRT, etc to be accepted as     transgender. No matter what stage you are at in your transition you're always valid!</p>
+        </section>
 
-<section class="twothird">
-<h2><b>There's a lot of information here, to be trans do I have to listen to all of it?</b></h2>
-<p>The short answer is no, you don't need to follow all the guides here to be trans. You don't need to tuck or undergow HRT, etc to be accepted as transgender. No matter what stage you are at in your transition you're always valid!</p>
-</section>
+        <section class="third">
+          <h2><b>Definitions</b></h2>
+          <p>Transgender, cisgender, LGBTQ, MtF, FtM, queer, enby?</p>
+          <p>What does it all mean?</p>
+          <p>Find out <a href="lgbt-definitions/lgbt-definitions.html">here</a>.</p>
+        </section>
 
-<section class="third">
-<h2><b>Definitions</b></h2>
-<p>Transgender, cisgender, LGBTQ, MtF, Ftm, queer, enby?</p>
-<p>What does it all mean?</p>
-<p>Find out <a href="lgbt-definitions/lgbt-definitions.html">here</a>.</p>
-</section>
+        <section class="third">
+          <div class="photo"><img src="../images/transgender-resources/estradiol-valerate-testosterone-undecanoate.png" alt="Estradiol valerate and testosterone undecanoate" /></div>
+        </section>
 
-<section class="third">
-<div class="photo"><img src="../images/transgender-resources/estradiol-valerate-testosterone-undecanoate.png" alt="Estradiol valerate and testosterone undecanoate" /></div>
-</section>
+        <section class="twothird">
+          <h2><b>Hormone Replacement Therapy</b></h2>
+          <p>A process undergone by many trans people to replace certain hormones in their endocrine system, changing their physiology to better match their gender identity.</p>
+          <p>Learn more <a href="hormone-replacement-therapy-information/hormone-replacement-therapy-information.html">here</a>.</p>
+        </section>
 
-<section class="twothird">
-<h2><b>Hormone Replacement Therapy</b></h2>
-<p>A process undergone by many trans people to replace certain hormones in their endocrine system, changing their physiology to better match their gender identity.</p>
-<p>Learn more <a href="hormone-replacement-therapy-information/hormone-replacement-therapy-information.html">here</a>.</p>
-</section>
+        <footer id="main-footer">
+          <p>Updated 12/8/2024</p>
+          <div include-html="../footer/links.html"></div>
+        </footer>
+      </main>
+    </div>
 
-<footer id="main-footer">
-<p>Updated 12/8/2024</p>
-<div include-html="../footer/links.html"></div>
-</footer>
-</main>
-</div>
-
-<script>
-includeHTML();
-</script>
-</body>
+    <script>
+      includeHTML();
+    </script>
+  </body>
 </html>

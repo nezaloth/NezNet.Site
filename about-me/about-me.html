@@ -1,92 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <title>NezNet.Site</title>
 
-<title>NezNet.Site</title>
+    <link rel="icon" type="image/png" href="../images/universal/logo.png" />
 
-<link rel="icon" type="image/png" href="../images/universal/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
+    <script src="/NezNet.Site/libraries/include-html.js"></script>
 
-<script src="/NezNet.Site/libraries/include-html.js"></script>
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+  </head>
 
-<!-- Imports stylesheet -->
-<link rel="stylesheet" href="../style.css">
-</head>
+  <body>
+    <!-- Please don't remove the next 2 lines! -->
+    <div id="top"></div>
+    <div id="skip"><a href="#content">Skip to content</a></div>
 
-<body>
-<!-- Please don't remove the next 2 lines! -->
-<div id="top"></div>
-<div id="skip"><a href="#content">Skip to content</a></div>
+    <div id="container">
+      <div id="sidebar">
+        <div id="sidebar-content">
+          <!-- Profile picture image -->
+          <div class="icon"><img src="../images/universal/pfp.png" alt="Profile picture" /></div>
+          <div include-html="../main-menu/site-name.html"></div>
 
-<div id="container">
-<div id="sidebar">
-<div id="sidebar-content">
-<!-- Profile picture image -->
-<div class="icon"><img src="../images/universal/pfp.png" alt="Profile picture" /></div>
-<div include-html="../main-menu/site-name.html"></div>
+          <!-- Navigation menu  -->
+          <nav id="main-menu">
+            <ul>
+              <div include-html="../main-menu/links.html"></div>
+            </ul>
+          </nav>
+          <div include-html="../main-menu/site-message.html"></div>
+        </div>
+      </div>
 
-<!-- Navigation menu  -->
-<nav id="main-menu">
-<ul>
-    <div include-html="../main-menu/links.html"></div>
-</ul>
-</nav>
-    <div include-html="../main-menu/site-message.html"></div>
-</div>
-</div>
+      <!-- Content area -->
+      <main id="content">
+        <!-- Section tags must be used for blocks -->
+        <section class="full">
+          <h1><b>About Me</b></h1>
+          <p>I'm Nezaloth or Nez, I go by she/her and are transgender. My interests include zoology, geology, programming and CGI.</p>
+        </section>
 
-<!-- Content area -->
-<main id="content">
-<!-- Section tags must be used for blocks -->
-<section class="full">
-<h1><b>About Me</b></h1>
-<p>I'm Nezaloth or Nez, I go by she/her and are transgender. My interests include zoology, geology, programming and CGI.</p>
-</section>
+        <section class="twothird">
+          <h2><b>Basics</b></h2>
+          <p><span style="color: #d900ff">Name:</span> Nezaloth/Nez</p>
+          <p><span style="color: #d900ff">Pronouns:</span> She/Her</p>
+          <p><span style="color: #d900ff">Sexuality:</span> Bisexual</p>
+          <p><span style="color: #d900ff">Status:</span> Single</p>
+          <p><span style="color: #d900ff">Likes:</span> CGI, animals, rocks, programming, plushies, pickles, collecting things</p>
+          <p><span style="color: #d900ff">Dislikes:</span> Stew, nematodes, winter mornings, maths</p>
+        </section>
 
-<section class="twothird">
-<h2><b>Basics</b></h2>
-<p><span style="color: #d900ff">Name:</span> Nezaloth/Nez</p>
-<p><span style="color: #d900ff">Pronouns:</span> She/Her</p>
-<p><span style="color: #d900ff">Sexuality:</span> Bisexual</p>
-<p><span style="color: #d900ff">Status:</span> Single</p>
-<p><span style="color: #d900ff">Likes:</span> CGI, animals, rocks, programming, plushies, pickles, collecting things</p>
-<p><span style="color: #d900ff">Dislikes:</span> Stew, nematodes, winter mornings, maths</p>
-</section>
+        <section class="third">
+          <div class="photo"><img src="../images/about-me/portrait.png" alt="Portrait" /></div>
+        </section>
 
-<section class="third">
-<div class="photo"><img src="../images/about-me/portrait.png" alt="Portrait" /></div>
-</section>
+        <section class="full">
+          <h2><b>Favorite Things</b></h2>
+          <p><span style="color: #d900ff">Colours:</span> Purple, pink</p>
+          <p><span style="color: #d900ff">Animals:</span> Insects, polychaete worms, sharks</p>
+          <p><span style="color: #d900ff">Games:</span> Factorio, Rain World, Minecraft, Highfleet</p>
+          <p><span style="color: #d900ff">Books:</span> The Call of Cthulhu, Hitchhiker's Guide to the Galaxy</p>
+          <p><span style="color: #d900ff">Movies:</span> Trainspotting, Pink Floyd's The Wall, Bladerunner</p>
+          <p><span style="color: #d900ff">TV:</span> The Sopranoes, Better Call Saul</p>
+          <p><span style="color: #d900ff">Foods:</span> Toad in the hole, fajitas, carbonara</p>
+          <p><span style="color: #d900ff">Drinks:</span> Tea, mogu mogu</p>
+        </section>
 
-<section class="full">
-<h2><b>Favourite Things</b></h2>
-<p><span style="color: #d900ff">Colours:</span> Purple, pink</p>
-<p><span style="color: #d900ff">Animals:</span> Insects, polychaete worms, sharks</p>
-<p><span style="color: #d900ff">Games:</span> Factorio, Rain World, Minecraft, Highfleet</p>
-<p><span style="color: #d900ff">Books:</span> The Call of Cthulhu, Hitchhiker's Guide to the Galaxy</p>
-<p><span style="color: #d900ff">Movies:</span> Trainspotting, Pink Floyd's The Wall, Bladerunner</p>
-<p><span style="color: #d900ff">TV:</span> The Sopranoes, Better Call Saul</p>
-<p><span style="color: #d900ff">Foods:</span> Toad in the hole, fajitas, carbonara</p>
-<p><span style="color: #d900ff">Drinks:</span> Tea, mogu mogu</p>
-</section>
+        <section class="full">
+          <h2><b>Some Extra Background</b></h2>
+          <p>Currently I live in New Zealand and emigrated here from the United Kingdom some years ago. This has fortunately made it easier for me to obtain hormone therapy and start my medical transition (Yaaay!).</p>
+          <p>At the time of writing I am three months into gender affirming hormone therapy, taking estradiol valerate and spironolactone. Eventually I plan on   writing a few blog posts here about my progress and experience with hormones, as it may be of interest for those considering HRT.</p>
+          <p>I have a background in biology and have a particular interest in zoology, having a collection of various preserved animals and bones. I am also curious about other natural bits and bobs too, occasionally collecting rocks and fossils. In the future I plan on adding a section to this site with photos and information on some of the more interesting things in my collection.</p>
+        </section>
 
-<section class="full">
-<h2><b>Some Extra Background</b></h2>
-<p>Currently I live in New Zealand and emigrated here from the United Kingdom some years ago. This has fortunately made it easier for me to obtain hormone therapy and start my medical transition (Yaaay!).</p>
-<p>At the time of writing I am three months into gender affirming hormone therapy, taking estradiol valerate and spironolactone. Eventually I plan on writing a few blog posts here about my progress and experience with hormones, as it may be of interest for those considering HRT.</p>
-<p>I have a background in biology and have a particular interest in zoology, having a collection of various preserved animals and bones. I am also curious about other natural bits and bobs too, occasionally collecting rocks and fossils. In the future I plan on adding a section to this site with photos and information on some of the more interesting things in my collection.</p>
-</section>
+        <footer id="main-footer">
+        <p>Updated 12/8/2024</p>
+        <div include-html="../footer/links.html"></div>
+        </footer>
+      </main>
+    </div>
 
-<footer id="main-footer">
-<p>Updated 12/8/2024</p>
-<div include-html="../footer/links.html"></div>
-</footer>
-</main>
-</div>
-
-<script>
-includeHTML();
-</script>
-</body>
+    <script>
+      includeHTML();
+    </script>
+  </body>
 </html>
