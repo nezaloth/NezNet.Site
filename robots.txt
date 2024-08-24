@@ -72,5 +72,3 @@ User-agent: Meta-ExternalFetcher
 Disallow: /
 User-agent: Applebot
 Disallow: /
-User-agent: *
-Disallow: /images/
