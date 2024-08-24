@@ -104,6 +104,12 @@ iframe
     border-radius:5px; /* Rounds frame corners */
 }
 
+.copyButton
+{
+    width:80px; /* this controls the width of the box */
+    font-size:10px; /* this controls the font size */
+}
+
 /* Table style */
 table
 {
