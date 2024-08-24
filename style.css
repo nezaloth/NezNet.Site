@@ -1,345 +1,285 @@
-/* The following CSS applies on all screen sizes */
+* {
 
-/* Colours and fonts */
-:root
-{
-    /* Fonts */
-    --bodyfont: Hack;
-    --headerfont: Hack;
+    margin: 0;
 
-    /* Main colours */
-    --background:#441750; /* Page background */
-    --color:#dcdfe4;
-    --block:rgba(12, 14, 15, 0.5); /* Background colour for the grid blocks in the content */
+    padding: 0;
 
-    /* Link colours */
-    --link:#d900ff;
-    --linkhover:#ff00ff;
+  }
 
-    /* Header colours */
-    --h1:#dcdfe4;
-    --h2:#dcdfe4;
-    --h3:#dcdfe4;
-    --h4:#dcdfe4;
 
-    /* Sidebar colours */
-    --sidebar:rgba(12, 14, 15, 0.5);
-    --sidebarcolor:#dcdfe4;
-    --title: #dcdfe4;
-    --sidebarlink: #d900ff;
-    --sidebarlinkhover:#ff00ff;
 
-    /* Menu colours */
-    --menubg:rgba(44, 26, 48, 0.5);
-    --menucolor:#d900ff;
-    --menubghover:#ff00ff;
-    --menucolorhover:rgba(12, 14, 15, 0.5);
-}
+  body {
 
-* { margin:0; padding:0; }
+    margin: 20px auto;
 
-/* Main body styling */
-body
-{
-    /* Page background */
-    background: #39194d url('images/universal/background.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-attachment:fixed;
+    font-family: "Lato";
 
-    /* Page text */
-    font:1rem Hack;
-    color:var(--color);
-}
+    font-weight: 300;
 
-/* Rounded corners */
-main section, #sidebar-content, #main-footer
-{
-    border-radius:5px;
-}
+  }
 
-/* Sidebar styling */
-#sidebar-content
-{
-    text-align:center;
-    background: var(--sidebar);
-    color: var(--sidebarcolor);
-    padding:10px;
-}
 
-#sidebar-content header
-{
-    color:var(--title);
-    font:1.8em var(--headerfont);
-    margin:8px;
-}
 
-#sidebar-content p a
-{
-    color:var(--sidebarlink);
-    transition:0.5s ease;
-}
+  form {
 
-#sidebar-content p a:hover
-{
-    color:var(--sidebarlinkhover);
-    transition:0.5s ease;
-}
+    padding: 15px 25px;
 
-.icon img {
-    border-radius:100%; /* Makes the icon a circle */
-    max-width:150px; /* Icon size */
-}
+    display: flex;
 
-/* Photo style */
-.photo img
-{
-    border-radius:5px; /* Rounds image corners */
-}
+    gap: 10px;
 
-/* Table style */
-table
-{
-    border-collapse: separate;
-    border: 1px solid #dcdfe4;
-    border-radius:5px;
-    width: 100%;
-}
+    justify-content: center;
 
-td
-{
+  }
+
+
+
+  form label {
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+  }
+
+
+
+  input {
+
+    font-family: "Lato";
+
+  }
+
+
+
+  a {
+
+    color: #0000ff;
+
+    text-decoration: none;
+
+  }
+
+
+
+  a:hover {
+
+    text-decoration: underline;
+
+  }
+
+
+
+  #wrapper,
+
+  #loginform {
+
+    margin: 0 auto;
+
+    padding-bottom: 25px;
+
+    background: #eee;
+
+    width: 600px;
+
+    max-width: 100%;
+
+    border: 2px solid #212121;
+
+    border-radius: 4px;
+
+  }
+
+
+
+  #loginform {
+
+    padding-top: 18px;
+
     text-align: center;
-}
 
-tr:hover
-{
-    background-color: #7f00ff;
-}
+  }
 
-/* Menu style */
 
-#main-menu
-{
-    font:1.1em var(--headerfont);
-    width:100%;
-}
 
-#main-menu ul
-{
-    list-style:none;
-}
+  #loginform p {
 
-#main-menu li a
-{
-    padding:7px;
-    background:var(--menubg);
-    color:var(--menucolor);
-    text-decoration:none;
-    transition:0.5s ease;
-}
+    padding: 15px 25px;
 
-#main-menu li a:hover, #main-menu li a:focus
-{
-    background: var(--menubghover);
-    color:var(--menucolorhover);
-    transition:0.5s ease;
-}
+    font-size: 1.4rem;
 
-/* Content style */
+    font-weight: bold;
 
-main
-{
-    margin-top:10px;
-}
+  }
 
-/* Block style */
 
-main section, #main-footer
-{
-    padding:15px;
-    background:var(--block);
-    margin-bottom:10px;
-}
 
-main h1
-{
-    font:1.8em var(--headerfont);
-    color:var(--h1);
-}
+  #chatbox {
 
-main h2
-{
-    font:1.5em var(--headerfont);
-    color:var(--h2);
-}
+    text-align: left;
 
-main h3
-{
-    font:1.3em var(--headerfont);
-    color:var(--h3);
-}
+    margin: 0 auto;
 
-main h4
-{
-    font:1em var(--headerfont);
-    font-style:italic;
-    color:var(--h4);
-}
+    margin-bottom: 25px;
 
-p
-{
-    line-height:1.5;
-    margin:10px 0 10px 0;
-}
+    padding: 10px;
 
-main a
-{
-    color:var(--link);
-    transition:0.5s ease;
-}
+    background: #fff;
 
-main a:hover, main a:focus
-{
-    color:var(--linkhover);
-    transition:0.5s ease;
-}
+    height: 300px;
 
-main ul
-{
-    list-style-position: outside;
-    margin-left: 25px;
-}
+    width: 530px;
 
-main ul li
-{
-    line-height:1.5;
-}
+    border: 1px solid #a7a7a7;
 
-main img
-{
-    max-width:100%;
-}
+    overflow: auto;
 
-main input, textarea, select, button
-{
-    background: var(--block);
-    color: var(--color);
-    font: 1rem var(--bodyfont);
-    border: 1px solid;
-    padding: 8px;
-    margin: 2px;
-}
+    border-radius: 4px;
 
-#main-footer
-{
-    text-align:center;
-}
+    border-bottom: 4px solid #a7a7a7;
 
-/* The following CSS only applies to mobile/small screens */
+  }
 
-/* Container style */
-#container
-{
-    width: calc(100% - 20px);
-    padding:10px;
-    margin-top:10px;
-}
 
-#sidebar-content
-{
-    width: calc(100% - 20px);
-}
 
-#main-menu li
-{
-    margin-bottom:15px;
-    display:inline-block;
-}
+  #usermsg {
 
-/* Skip to content button */
-#skip a
-{
-    position:absolute;
-    display:inline-block;
-    left:0px;
-    top:-1000px;
-    overflow:hidden;
-    transition:top 0.5s ease;
-    background:var(--block);
-    color:var(--link);
-    z-index:1000;
-    padding:5px;
-}
+    flex: 1;
 
-#skip a:focus
-{
-    top: 0;
-    transition:top 0.5s ease;
-}
+    border-radius: 4px;
 
-/* The following CSS only applies to desktop/big screens */
+    border: 1px solid #ff9800;
 
-@media screen and (min-width: 800px)
-{
-    #container
-    {
-        max-width:950px;
-        width:90%;
-        margin:25px auto;
-        display:flex;
-        gap:20px;
-    }
+  }
 
-    #sidebar
-    {
-        flex: 1 1 calc(25% - 20px);
-        margin-top:10px;
-    }
 
-    /* Sticky sidebar */
-    #sidebar-content
-    {
-        position:sticky;
-        top:10px;
-    }
 
-    /* Make menu links into a column */
-    #main-menu li
-    {
-        display:block;
-        margin:0;
-    }
+  #name {
 
-    #main-menu li a
-    {
-        display:block;
-        border-bottom:1px solid;
-    }
+    border-radius: 4px;
 
-    main
-    {
-        flex: 1 1 calc(75% - 30px);
-        display:flex;
-        flex-wrap:wrap;
-        gap:10px;
-    }
+    border: 1px solid #ff9800;
 
-    main section
-    {
-        margin:0;
-    }
+    padding: 2px 8px;
 
-    #main-footer
-    {
-        flex: 1 1 calc(100% - 40px);
-    }
+  }
 
-    /* Defining grid blocks */
-    .full { flex: 1 1 calc(100% - 40px);}
-    .half { flex: 1 1 calc(50% - 40px); }
-    .third { flex: 1 1 calc(33% - 40px); }
-    .twothird { flex: 1 1 calc(66% - 40px); }
-    .quarter { flex: 1 1 calc(25% - 40px); }
-    .threequarter { flex: 1 1 calc(75% - 40px); }
-}
+
+
+  #submitmsg,
+
+  #enter{
+
+    background: #ff9800;
+
+    border: 2px solid #e65100;
+
+    color: white;
+
+    padding: 4px 10px;
+
+    font-weight: bold;
+
+    border-radius: 4px;
+
+  }
+
+
+
+  .error {
+
+    color: #ff0000;
+
+  }
+
+
+
+  #menu {
+
+    padding: 15px 25px;
+
+    display: flex;
+
+  }
+
+
+
+  #menu p.welcome {
+
+    flex: 1;
+
+  }
+
+
+
+  a#exit {
+
+    color: white;
+
+    background: #c62828;
+
+    padding: 4px 8px;
+
+    border-radius: 4px;
+
+    font-weight: bold;
+
+  }
+
+
+
+  .msgln {
+
+    margin: 0 0 5px 0;
+
+  }
+
+
+
+  .msgln span.left-info {
+
+    color: orangered;
+
+  }
+
+
+
+  .msgln span.chat-time {
+
+    color: #666;
+
+    font-size: 60%;
+
+    vertical-align: super;
+
+  }
+
+
+
+  .msgln b.user-name, .msgln b.user-name-left {
+
+    font-weight: bold;
+
+    background: #546e7a;
+
+    color: white;
+
+    padding: 2px 4px;
+
+    font-size: 90%;
+
+    border-radius: 4px;
+
+    margin: 0 5px 0 0;
+
+  }
+
+
+
+  .msgln b.user-name-left {
+
+    background: orangered;
+
+  }
+
+
