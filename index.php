@@ -1,81 +1,205 @@
+<?php
+
+session_start();
+
+if(isset($_GET['logout'])){
+
+
+
+	//Simple exit message
+
+    $logout_message = "<div class='msgln'><span class='left-info'>User <b class='user-name-left'>". $_SESSION['name'] ."</b> has left the chat session.</span><br></div>";
+
+    file_put_contents("log.html", $logout_message, FILE_APPEND | LOCK_EX);
+
+
+
+	session_destroy();
+
+	header("Location: index.php"); //Redirect the user
+
+}
+
+if(isset($_POST['enter'])){
+
+    if($_POST['name'] != ""){
+
+        $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
+
+    }
+
+    else{
+
+        echo '<span class="error">Please type in a name</span>';
+
+    }
+
+}
+
+function loginForm(){
+
+    echo
+
+    '<div id="loginform">
+
+<p>Please enter your name to continue!</p>
+
+<form action="index.php" method="post">
+
+<label for="name">Name &mdash;</label>
+
+<input type="text" name="name" id="name" />
+
+<input type="submit" name="enter" id="enter" value="Enter" />
+
+</form>
+
+</div>';
+
+}
+
+?>
+
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <title>NezNet.Site</title>
 
-    <link rel="icon" type="image/png" href="../images/universal/logo.png" />
+    <head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
+        <meta charset="utf-8" />
 
-    <script src="/NezNet.Site/libraries/include-html.js"></script>
+        <title>Tuts+ Chat Application</title>
 
-    <!-- Imports stylesheet -->
-    <link rel="stylesheet" href="../style.css">
-  </head>
+        <meta name="description" content="Tuts+ Chat Application" />
 
-  <body>
-    <!-- Please don't remove the next 2 lines! -->
-    <div id="top"></div>
-    <div id="skip"><a href="#content">Skip to content</a></div>
+        <link rel="stylesheet" href="style.css" />
 
-    <div id="container">
-      <div id="sidebar">
-        <div id="sidebar-content">
-          <!-- Profile picture image -->
-          <div class="icon"><img src="../images/universal/pfp.png" alt="Profile picture" /></div>
-          <div include-html="../main-menu/site-name.html"></div>
+    </head>
 
-          <!-- Navigation menu  -->
-          <nav id="main-menu">
-            <ul>
-              <div include-html="../main-menu/links.html"></div>
-            </ul>
-          </nav>
-          <div include-html="../main-menu/site-message.html"></div>
-        </div>
-      </div>
+    <body>
 
-      <!-- Content area -->
-      <main id="content">
-        <!-- Section tags must be used for blocks -->
-        <section class="full">
-          <h1><b>Site Template</b></h1>
-          <p>Feel free to copy and use this site template for any personal projects!</p>
-          <p>Find the source code for this webpage on the site github: <a href="https://github.com/nezaloth/NezNet.Site/blob/main/template.html">https://github.com/nezaloth/NezNet.Site/blob/main/template.html</a></p>
-          <p>In order to work correctly the template also needs <a href="https://github.com/nezaloth/NezNet.Site/blob/main/style.css">style.css</a>, the <a       href="https://  github.com/nezaloth/NezNet.Site/tree/main/libraries">libraries folder</a>, <a href="https://github.com/nezaloth/NezNet.Site/tree/main/main-menu">main-menu folder</a> and <a href="https://github.com/nezaloth/NezNet.Site/tree/main/footer">footer folder</a></p>
-        </section>
+    <?php
 
-        <section class="full">
-          <div id="wrapper">
+    if(!isset($_SESSION['name'])){
+
+        loginForm();
+
+    }
+
+    else {
+
+    ?>
+
+        <div id="wrapper">
+
             <div id="menu">
-              <p class="welcome">Welcome, <b></b></p>
-              <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+
+                <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p>
+
+                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+
             </div>
 
-            <div id="chatbox"></div>
+            <div id="chatbox">
+
+            <?php
+
+            if(file_exists("log.html") && filesize("log.html") > 0){
+
+                $contents = file_get_contents("log.html");
+
+                echo $contents;
+
+            }
+
+            ?>
+
+            </div>
 
             <form name="message" action="">
-              <input name="usermsg" type="text" id="usermsg" />
-              <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
+
+                <input name="usermsg" type="text" id="usermsg" />
+
+                <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
+
             </form>
-          </div>
-          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-          <script type="text/javascript">
+
+        </div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script type="text/javascript">
+
             // jQuery Document
-            $(document).ready(function () {});
-          </script>
-        </section>
 
-        <footer id="main-footer">
-          <p>Updated 24/8/2024</p>
-          <div include-html="../footer/links.html"></div>
-        </footer>
-      </main>
-    </div>
+            $(document).ready(function () {
 
-    <script>
-      includeHTML();
-    </script>
-  </body>
+                $("#submitmsg").click(function () {
+
+                    var clientmsg = $("#usermsg").val();
+
+                    $.post("post.php", { text: clientmsg });
+
+                    $("#usermsg").val("");
+
+                    return false;
+
+                });
+
+                function loadLog() {
+
+                    var oldscrollHeight = $("#chatbox")[0].scrollHeight - 20; //Scroll height before the request
+
+                    $.ajax({
+
+                        url: "log.html",
+
+                        cache: false,
+
+                        success: function (html) {
+
+                            $("#chatbox").html(html); //Insert chat log into the #chatbox div
+
+                            //Auto-scroll
+
+                            var newscrollHeight = $("#chatbox")[0].scrollHeight - 20; //Scroll height after the request
+
+                            if(newscrollHeight > oldscrollHeight){
+
+                                $("#chatbox").animate({ scrollTop: newscrollHeight }, 'normal'); //Autoscroll to bottom of div
+
+                            }
+
+                        }
+
+                    });
+
+                }
+
+                setInterval (loadLog, 2500);
+
+                $("#exit").click(function () {
+
+                    var exit = confirm("Are you sure you want to end the session?");
+
+                    if (exit == true) {
+
+                    window.location = "index.php?logout=true";
+
+                    }
+
+                });
+
+            });
+
+        </script>
+
+    </body>
+
 </html>
+
+<?php
+
+}
+
+?>
