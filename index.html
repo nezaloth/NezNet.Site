@@ -61,6 +61,39 @@
           <p>The site template and source code is available <a href="template/template.html">here</a>.</p>
         </section>
 
+        <section class="full">
+        <div class="join-container">
+			<header class="join-header">
+                <i class="fas fa-bolt"></i>
+				<h1> ChatSpeed</h1>
+			</header>
+			<main class="join-main">
+				<form action="chat.html">
+					<div class="form-control">
+						<label for="username">Username</label>
+						<input
+							type="text"
+							name="username"
+							id="username"
+							autocomplete="off"
+							placeholder="Enter username..."
+							required
+						/>
+					</div>
+					<div class="form-control">
+						<label for="room">Room</label>
+						<select name="room" id="room">
+							<option value="English">English</option>
+							<option value="Myanmar">Myanmar</option>
+							<option value="Japanese">Japanese</option>
+						</select>
+					</div>
+					<button type="submit" class="btn-join">Join Chat</button>
+				</form>
+			</main>
+		</div>
+        </section>
+
         <footer id="main-footer">
           <p>Updated 12/8/2024</p>
           <div include-html="footer/links.html"></div>
