@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NezNet.Site</title>
+
+    <link rel="icon" type="image/png" href="images/universal/logo.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <script src="/NezNet.Site/libraries/include-html.js"></script>
+
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- Please don't remove the next 2 lines! -->
+    <div id="top"></div>
+    <div id="skip"><a href="#content">Skip to content</a></div>
+
+    <div id="container">
+      <div id="sidebar">
+        <div id="sidebar-content">
+          <!-- Profile picture image -->
+          <div class="icon"><img src="images/universal/pfp.png" alt="Profile picture" /></div>
+          <div include-html="main-menu/site-name.html"></div>
+
+          <!-- Navigation menu  -->
+          <nav id="main-menu">
+            <ul>
+              <div include-html="main-menu/links.html"></div>
+            </ul>
+          </nav>
+          <div include-html="main-menu/site-message.html"></div>
+        </div>
+      </div>
+
+      <!-- Content area -->
+      <main id="content">
+        <!-- Section tags must be used for blocks -->
+        <section class="full">
+          <h1><b>Welcome To NezNet!</b></h1>
+          <p>Nezaloth's personal blog/information center containing a range of any and all of my personal interests!</p>
+
+          <p><a href="https://github.com/nezaloth/NezNet.Site">Please report any site problems or suggestions here on my github!</a> Or copy and edit the code for any of your own purposes if you wish.</p>
+        </section>
+
+        <section class="full">
+          <h2><b>Who Am I?</b></h2>
+          <div class="container">
+            <div class="chat-window">
+              <div class="chat-area">
+                <div class="chat-messages">
+
+                </div>
+              </div>
+              <div class="user-input">
+
+                <button id="send-button">Send</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer id="main-footer">
+          <p>Updated 12/8/2024</p>
+          <div include-html="footer/links.html"></div>
+        </footer>
+      </main>
+    </div>
+
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>
