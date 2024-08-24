@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NezNet.Site</title>
+
+    <link rel="icon" type="image/png" href="../images/universal/logo.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <script src="/NezNet.Site/libraries/include-html.js"></script>
+
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+    <!-- Please don't remove the next 2 lines! -->
+    <div id="top"></div>
+    <div id="skip"><a href="#content">Skip to content</a></div>
+
+    <div id="container">
+      <div id="sidebar">
+        <div id="sidebar-content">
+          <!-- Profile picture image -->
+          <div class="icon"><img src="../images/universal/pfp.png" alt="Profile picture" /></div>
+          <div include-html="../main-menu/site-name.html"></div>
+
+          <!-- Navigation menu  -->
+          <nav id="main-menu">
+            <ul>
+              <div include-html="../main-menu/links.html"></div>
+            </ul>
+          </nav>
+          <div include-html="../main-menu/site-message.html"></div>
+        </div>
+      </div>
+
+      <!-- Content area -->
+      <main id="content">
+        <!-- Section tags must be used for blocks -->
+        <section class="full">
+          <h1><b>Chatroom</b></h1>
+          <p>Welcome to the NezNet chatroom! Feel free to talk and comment, I only ask that discussions are kept civil and bad language is avoided.</p>
+        </section>
+
+        <section class="full">
+          <iframe src="https://www3.cbox.ws/box/?boxid=3540314&boxtag=ATb6DI" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+        </section>
+
+        <footer id="main-footer">
+          <p>Updated 24/8/2024</p>
+          <div include-html="footer/links.html"></div>
+        </footer>
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>
