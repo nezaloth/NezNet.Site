@@ -39,7 +39,7 @@
 * { margin:0; padding:0; }
 
 /* Main body styling */
-body
+html, body
 {
     /* Page background */
     background: #39194d url('images/universal/background.png');
@@ -92,41 +92,16 @@ main section, #sidebar-content, #main-footer
     max-width:150px; /* Icon size */
 }
 
-/* Photo style */
-.photo img
-{
-    border-radius:5px; /* Rounds image corners */
-}
-
 .copyButton
 {
     width:67px; /* this controls the width of the box */
     font-size:10px; /* this controls the font size */
 }
 
-/* Iframe style */
-iframe
+/* Photo style */
+.photo img
 {
-    border-radius:5px; /* Rounds frame corners */
-}
-
-/* Table style */
-table
-{
-    border-collapse: separate;
-    border: 1px solid #dcdfe4;
-    border-radius:5px;
-    width: 100%;
-}
-
-td
-{
-    text-align: center;
-}
-
-tr:hover
-{
-    background-color: #7f00ff;
+    border-radius:5px; /* Rounds image corners */
 }
 
 /* Menu style */
@@ -241,6 +216,35 @@ main input, textarea, select, button
     border: 1px solid;
     padding: 8px;
     margin: 2px;
+}
+
+main svg, iframe
+{
+    border-radius:5px; /* Rounds image corners */
+}
+
+main svg
+{
+    width="100%" height="auto"
+}
+
+/* Table style */
+main table
+{
+    border-collapse: separate;
+    border: 1px solid #dcdfe4;
+    border-radius:5px;
+    width: 100%;
+}
+
+main td
+{
+    text-align: center;
+}
+
+main tr:hover
+{
+    background-color: #7f00ff;
 }
 
 #main-footer
