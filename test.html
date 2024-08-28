@@ -9,9 +9,19 @@
     <h1>Example with controls and no auto-play</h1>
       <img id="example1" src="images/about-me/portrait.png" rel:animated_src="images/collection/horse-metacarpal/horse-metacarpal.gif" rel:auto_play="0" />
       <br>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="19" value="1" class="slider" id="myRange">
+      </div>
       <script type="text/javascript">
         var sup1 = new SuperGif({ gif: document.getElementById('example1') } );
         sup1.load();
+
+        var slider = document.getElementById("myRange");
+
+        // Update the current slider value (each time you drag the slider handle)
+        slider.oninput = function() {
+          sup1.move_to(slider.value);
+        }
       </script>
       <a href="javascript:;" onmousedown="sup1.pause(); return false;">Pause</a> |
       <a href="javascript:;" onmousedown="sup1.play(); return false;">Play</a> |
@@ -19,18 +29,5 @@
       <a href="javascript:;" onmousedown="sup1.move_relative(1); return false;">Step forward</a> |
       <a href="javascript:;" onmousedown="sup1.move_relative(-1); return false;">Step back</a>
 
-      <div class="slidecontainer">
-        <input type="range" min="1" max="19" value="1" class="slider" id="myRange">
-      </div>
-
-      <script>
-        var slider = document.getElementById("myRange");
-        output.innerHTML = slider.value; // Display the default slider value
-
-        // Update the current slider value (each time you drag the slider handle)
-        slider.oninput = function() {
-          sup1.move_to(slider.value);
-        }
-      </script>
   </body>
 </html>
