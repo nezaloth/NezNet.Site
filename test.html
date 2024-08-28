@@ -18,5 +18,19 @@
       <a href="javascript:;" onmousedown="sup1.move_to(0); return false;">Restart</a> |
       <a href="javascript:;" onmousedown="sup1.move_relative(1); return false;">Step forward</a> |
       <a href="javascript:;" onmousedown="sup1.move_relative(-1); return false;">Step back</a>
+
+      <div class="slidecontainer">
+        <input type="range" min="1" max="19" value="1" class="slider" id="myRange">
+      </div>
+
+      <script>
+        var slider = document.getElementById("myRange");
+        output.innerHTML = slider.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        slider.oninput = function() {
+          sup1.move_to(this.value)
+        }
+      </script>
   </body>
 </html>
