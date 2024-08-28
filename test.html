@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="/libraries/libgif.js"></script>
+  </head>
+  <body>
+    <h1>Example with controls and no auto-play</h1>
+      <img id="example1" src="images/collection/horse-metacarpal/horse-metacarpal.gif" rel:auto_play="0" />
+      <br>
+      <script type="text/javascript">
+        var sup1 = new SuperGif({ gif: document.getElementById('example1') } );
+        sup1.load();
+      </script>
+      <a href="javascript:;" onmousedown="sup1.pause(); return false;">Pause</a> |
+      <a href="javascript:;" onmousedown="sup1.play(); return false;">Play</a> |
+      <a href="javascript:;" onmousedown="sup1.move_to(0); return false;">Restart</a> |
+      <a href="javascript:;" onmousedown="sup1.move_relative(1); return false;">Step forward</a> |
+      <a href="javascript:;" onmousedown="sup1.move_relative(-1); return false;">Step back</a>
+  </body>
+</html>
