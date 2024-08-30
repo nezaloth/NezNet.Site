@@ -49,41 +49,44 @@
         </section>
 
         <section class="quarter">
+          <!-- Purple And Plain Colour Image On Hover -->
           <div class="container">
             <div class="photo"><img src="../images/collection/horse-metacarpal/horse-metacarpal-hover.gif" alt="Bone" /></div>
             <div class="overlay">
-              <div class="photo"><img id="myImg" src="../images/collection/horse-metacarpal/horse-metacarpal.gif" alt="Bone hover" /></div>
+              <div class="photo"><img id="mo1" src="../images/collection/horse-metacarpal/horse-metacarpal.gif" alt="Bone hover" /></div>
             </div>
           </div>
 
-          <!-- The Modal -->
-          <div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="img01">
-            <div class="caption"></div>
+          <!-- Image Modal -->
+          <div id="modal1" class="modal">
+            <span class="close" id="close1">&times;</span>
+            <img class="modal-content" id="img1">
+            <div class="caption" id="caption1"></div>
           </div>
 
           <script>
-          // Get the modal
-          var modal = document.getElementById("myModal");
+              // Get Modal
+              var modal = document.getElementById("modal1");
 
-          // Get the image and insert it inside the modal - use its "alt" text as a caption
-          var img = document.getElementById("myImg");
-          var modalImg = document.getElementById("img01");
-          var captionText = document.getElementById("caption");
-          img.onclick = function(){
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-          }
+              // Gets Image And Insert It Inside The Modal, Uses Alt Text As Caption
+              var img = document.getElementById("mo1");
+              var modalImg = document.getElementById("img1");
+              var captionText = document.getElementById("caption1");
 
-          // Get the <span> element that closes the modal
-          var span = document.getElementsByClassName("close")[0];
+              img.onclick = function()
+              {
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+              }
 
-          // When the user clicks on <span> (x), close the modal
-          span.onclick = function() {
-            modal.style.display = "none";
-          }
+              // Gets <span> Element That Closes Modal
+              var span = document.getElementsByClassName("close")[0];
+
+              // When Click On <span> (x) Closes Modal
+              span.onclick = function() {
+                  modal.style.display = "none";
+              }
           </script>
         </section>
 
@@ -105,9 +108,41 @@
           <div class="container">
             <div class="photo"><img src="../images/collection/fur-seal-ulna/fur-seal-ulna.gif" alt="Bone" /></div>
             <div class="overlay">
-              <div class="photo"><img src="../images/collection/fur-seal-ulna/fur-seal-ulna-hover.gif" alt="Bone hover" /></div>
+              <div class="photo"><img id="mo2" src="../images/collection/fur-seal-ulna/fur-seal-ulna-hover.gif" alt="Bone hover" /></div>
             </div>
           </div>
+
+          <!-- Image Modal -->
+          <div id="modal2" class="modal">
+            <span class="close" id="close2">&times;</span>
+            <img class="modal-content" id="img2">
+            <div class="caption" id="caption2"></div>
+          </div>
+
+          <script>
+              // Get Modal
+              var modal = document.getElementById("modal2");
+
+              // Gets Image And Insert It Inside The Modal, Uses Alt Text As Caption
+              var img = document.getElementById("mo2");
+              var modalImg = document.getElementById("img2");
+              var captionText = document.getElementById("caption2");
+
+              img.onclick = function()
+              {
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+              }
+
+              // Gets <span> Element That Closes Modal
+              var span = document.getElementsByClassName("close")[1];
+
+              // When Click On <span> (x) Closes Modal
+              span.onclick = function() {
+                  modal.style.display = "none";
+              }
+          </script>
         </section>
 
         <footer id="main-footer">

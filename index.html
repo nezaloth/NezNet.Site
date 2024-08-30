@@ -67,9 +67,41 @@
           <div class="container">
             <div class="photo"><img src="images/collection/horse-metacarpal/horse-metacarpal-hover.gif" alt="Bone" /></div>
             <div class="overlay">
-              <div class="photo"><img src="images/collection/horse-metacarpal/horse-metacarpal.gif" alt="Bone hover" /></div>
+              <div class="photo"><img id="mo1" src="images/collection/horse-metacarpal/horse-metacarpal.gif" alt="Bone hover" /></div>
             </div>
           </div>
+
+          <!-- Image Modal -->
+          <div id="modal1" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img1">
+            <div class="caption" id="caption1"></div>
+          </div>
+
+          <script>
+              // Get Modal
+              var modal = document.getElementById("modal1");
+
+              // Gets Image And Insert It Inside The Modal, Uses Alt Text As Caption
+              var img = document.getElementById("mo1");
+              var modalImg = document.getElementById("img1");
+              var captionText = document.getElementById("caption1");
+
+              img.onclick = function()
+              {
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+              }
+
+              // Gets <span> Element That Closes Modal
+              var span = document.getElementsByClassName("close")[0];
+
+              // When Click On <span> (x) Closes Modal
+              span.onclick = function() {
+                  modal.style.display = "none";
+              }
+          </script>
         </section>
 
         <section class="threequarter">
