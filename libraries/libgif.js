@@ -428,7 +428,7 @@
             vp_h: null,
             //canvas sizes
             c_w: null,
-            c_h: null
+            c_h: 500
         };
         for (var i in opts ) { options[i] = opts[i] }
         if (options.vp_w && options.vp_h) options.is_vp = true;
