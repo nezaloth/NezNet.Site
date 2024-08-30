@@ -66,10 +66,29 @@
         </section>
 
         <section class="threequarter">
-          <h2><b>My Collection</b></h2>
-          <p>Visit my personal collection of bones, insects, shells, sponges, rocks and more! All digitized and archived for your viewing pleasure.</p>
-          <p>Pictured: Partially eroded horse cannon bone (3rd metacarpal/metatarsal) that I found whilst exploring at the beach.</p>
-          <p>Click the link <a href="collection/overview.html">here</a> to see more (UNDER CONSTRUCTION).</p>
+          <center>
+      <img id="example1" src="images/collection/horse-metacarpal/horse-metacarpal.gif" rel:animated_src="images/collection/horse-metacarpal/horse-metacarpal.gif"  width="467" height="375" />
+
+      <div class="slidecontainer">
+        <input type="range" min="1" max="19" value="1" class="slider" id="myRange">
+      </div>
+
+      <a href="javascript:;" onmousedown="sup1.play(); return false;">Play</a>
+
+      <script type="text/javascript">
+        var sup1 = new SuperGif({ gif: document.getElementById('example1'), draw_while_loading: true, show_progress_bar: false} );
+        sup1.load();
+
+        var slider = document.getElementById("myRange");
+
+        // Update the current slider value (each time you drag the slider handle)
+        slider.oninput = function()
+        {
+          sup1.pause();
+          sup1.move_to(slider.value);
+        }
+      </script>
+    </center>
         </section>
 
         <section class="threequarter">
