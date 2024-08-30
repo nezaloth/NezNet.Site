@@ -167,8 +167,8 @@ main section, #sidebar-content, #main-footer
   position: relative;
   margin: auto;
   display: block;
-  max-width: 100%;
-  max-height: 50%;
+  width: 50%;
+  height: 80%;
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
