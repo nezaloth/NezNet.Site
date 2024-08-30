@@ -59,11 +59,10 @@
           <button onclick="document.getElementById('id01').style.display='block'" >Open Modal</button>
 
           <div id="id01" class="modal">
-            <div class="modal-content">
               <div class="container">
-                <span onclick="document.getElementById('id01').style.display='none'" >&times;</span>
+                <span class="close" onclick="document.getElementById('id01')" >&times;</span>
 
-                <img id="example1" src="../images/collection/horse-metacarpal/horse-metacarpal.gif" />
+                <img class="modal-content" id="example1" src="../images/collection/horse-metacarpal/horse-metacarpal.gif" height="800" />
                 <div class="slidecontainer">
                   <input type="range" min="1" max="19" value="1" class="slider" id="myRange">
                 </div>
@@ -83,7 +82,6 @@
                   }
                 </script>
               </div>
-            </div>
           </div>
         </section>
 

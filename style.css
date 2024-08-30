@@ -107,11 +107,11 @@ main section, #sidebar-content, #main-footer
   margin: auto;
   display: block;
   max-width: 100%;
-  max-height: 80%;
+  max-height: 50%;
 }
 
 /* Caption of Modal Image */
-#caption {
+.caption {
   margin: auto;
   display: block;
   width: 80%;
