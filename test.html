@@ -12,10 +12,8 @@
     </div>
     <a href="javascript:;" onmousedown="sup1.play(); return false;">Play</a>
     <script type="text/javascript">
-      var sup1 = new SuperGif({ gif: document.getElementById('example1') } );
+      var sup1 = new SuperGif({ gif: document.getElementById('example1') draw_while_loading: true show_progress_bar: false} );
       sup1.load();
-      sup1.draw_while_loading(true);
-      sup1.show_progress_bar(false);
 
       var slider = document.getElementById("myRange");
 
