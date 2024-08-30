@@ -49,11 +49,35 @@
 
         <section class="quarter">
           <div class="container">
-            <div class="photo"><img src="../images/collection/horse-metacarpal/horse-metacarpal-hover.gif" alt="Bone" /></div>
+            <div class="photo"><img id="example1" src="../images/collection/horse-metacarpal/horse-metacarpal-hover.gif" alt="Bone" /></div>
             <div class="overlay">
-              <div class="photo"><img src="../images/collection/horse-metacarpal/horse-metacarpal.gif" alt="Bone hover" /></div>
+              <div class="photo"><img id="example2" src="../images/collection/horse-metacarpal/horse-metacarpal.gif" alt="Bone hover" /></div>
             </div>
           </div>
+
+          <div class="slidecontainer">
+            <input type="range" min="1" max="19" value="1" class="slider" id="myRange">
+          </div>
+
+          <p><button type="button" href="javascript:;" onmousedown="sup1.play(); sup2.play(); return false;">Resume</button></p>
+
+          <script type="text/javascript">
+            var sup1 = new SuperGif({ gif: document.getElementById('example1'), draw_while_loading: true, show_progress_bar: false} );
+            sup1.load();
+            var sup2 = new SuperGif({ gif: document.getElementById('example2'), draw_while_loading: true, show_progress_bar: false} );
+            sup2.load();
+
+            var slider = document.getElementById("myRange");
+
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function()
+            {
+              sup1.pause();
+              sup1.move_to(slider.value);
+              sup2.pause();
+              sup2.move_to(slider.value);
+            }
+          </script>
         </section>
 
         <section class="threequarter">
