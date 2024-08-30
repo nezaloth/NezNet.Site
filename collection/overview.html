@@ -60,13 +60,13 @@
 
           <div id="id01" class="modal">
             <span class="close" onclick="document.getElementById('id01').style.display='none'" >&times;</span>
-            <img class="modal-content" id="example1" src="../images/collection/horse-metacarpal/horse-metacarpal.gif" height="800" />
+            <img class="modal-content" id="example1" src="../images/collection/horse-metacarpal/horse-metacarpal.gif" height="500" />
             <div class="slidecontainer">
               <input type="range" min="1" max="19" value="1" class="slider" id="myRange">
             </div>
             <a href="javascript:;" onmousedown="sup1.play(); return false;">Play</a>
             <script type="text/javascript">
-              var sup1 = new SuperGif({ gif: document.getElementById('example1'), draw_while_loading: true, show_progress_bar: false} );
+              var sup1 = new SuperGif({ gif: document.getElementById('example1'), draw_while_loading: true, show_progress_bar: false, c_h: 800} );
               sup1.load();
               var slider = document.getElementById("myRange");
               // Update the current slider value (each time you drag the slider handle)
