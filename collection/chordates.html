@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chordates - NezNet.Site</title>
+
+    <link rel="icon" type="image/png" href="../images/universal/logo.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="A section of my personal chordate collection, containing an assortments of bones and teeth from a broad range of different animals.">
+
+    <script src="/NezNet.Site/libraries/include-html.js"></script>
+
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+    <!-- Please don't remove the next 2 lines! -->
+    <div id="top"></div>
+    <div id="skip"><a href="#content">Skip to content</a></div>
+
+    <div id="container">
+      <div id="sidebar">
+        <div id="sidebar-content">
+          <!-- Profile picture image -->
+          <div class="icon"><img src="../images/universal/pfp.png" alt="Profile picture" /></div>
+          <div include-html="../main-menu/site-name.html"></div>
+
+          <!-- Navigation menu  -->
+          <nav id="main-menu">
+            <ul>
+              <div include-html="../main-menu/links.html"></div>
+            </ul>
+          </nav>
+          <div include-html="../main-menu/site-message.html"></div>
+        </div>
+      </div>
+
+      <!-- Content area -->
+      <main id="content">
+        <!-- Section tags must be used for blocks -->
+        <section class="full">
+          <h1><b>Chordate Collection (Vertebrates, Lancelets And Tunicates)</b></h1>
+          <p>A section of my personal chordate collection, containing an assortments of bones and teeth from a broad range of different animals.</p>
+          <p>Please do note that I am not a chordate specialist and my knowledge in this animal group primarily extends to marine species. As a result I am still unsure on the identification of a few species presented here and would love for you to contact me if you can help identify the specimens I'm unsure about.</p>
+        </section>
+
+        <section class="quarter">
+          <!-- Purple And Plain Colour Image On Hover -->
+          <div class="container">
+            <div class="photo"><img src="../images/collection/horse-metacarpal/horse-metacarpal-hover.gif" alt="Horse 3rd metacarpal/metatarsal" /></div>
+            <div class="overlay">
+              <div class="photo"><img id="mo1" src="../images/collection/horse-metacarpal/horse-metacarpal.gif" alt="Horse 3rd metacarpal/metatarsal" /></div>
+            </div>
+          </div>
+
+          <!-- Image Modal -->
+          <div id="modal1" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img1">
+            <div class="caption" id="caption1"></div>
+          </div>
+
+          <script>
+              // Get Modal
+              var modal = document.getElementById("modal1");
+
+              // Gets Image And Insert It Inside The Modal, Uses Alt Text As Caption
+              var img = document.getElementById("mo1");
+              var modalImg = document.getElementById("img1");
+              var captionText = document.getElementById("caption1");
+
+              img.onclick = function()
+              {
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+              }
+
+              // Gets <span> Element That Closes Modal
+              var span = document.getElementsByClassName("close")[0];
+
+              // When Click On <span> (x) Closes Modal
+              span.onclick = function() {
+                  modal.style.display = "none";
+              }
+          </script>
+        </section>
+
+        <section class="threequarter">
+          <h2><b>Domestic Horse (<i>Equus ferus caballus</i>) Cannon Bone</b></h2>
+          <p>Partially eroded horse cannon bone (3rd metacarpal, possibly metatarsal) that I found whilst exploring near a river mouth at the beach.</p>
+          <p>Appears to belong to an adult, as the bone is 208mm at the longest point and 29mm wide along the narrowest point. Unfortunately, based of this information I'm not able to judge what sex it may have been, although someone more knowledgeable in this area may know better.</p>
+          <p>The area were the bone was found is often visited by horse riders and there are plenty of nearby farms, possibly explaining why it was found there.</p>
+        </section>
+
+        <section class="twothird">
+          <h2><b>New Zealand Fur Seal (<i>Arctocephalus forsteri</i>) Ulna</b></h2>
+          <p>Relatively well preserved fur seal ulna I found along a sandy beach next to a harbour mouth.</p>
+          <p>The bone is 213mm in length at the longest point, indicating it likely belonged to an adult. Additionally, there is a small amount of damage that was probably caused by the bone being bashed about in the waves.</p>
+          <p>This beach is usually home to sea lions, but based of the size I believe this is a fur seal bone, which is not unlikely considering I also found a nearby carcass of an unfortunate fur seal pup that had sadly washed ashore.</p>
+        </section>
+
+        <section class="third">
+          <div class="container">
+            <div class="photo"><img src="../images/collection/fur-seal-ulna/fur-seal-ulna.gif" alt="New Zealand fur seal ulna" /></div>
+            <div class="overlay">
+              <div class="photo"><img id="mo2" src="../images/collection/fur-seal-ulna/fur-seal-ulna-hover.gif" alt="New Zealand fur seal ulna" /></div>
+            </div>
+          </div>
+
+          <!-- Image Modal -->
+          <div id="modal2" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img2">
+            <div class="caption" id="caption2"></div>
+          </div>
+
+          <script>
+              // Get Modal
+              var modal = document.getElementById("modal2");
+
+              // Gets Image And Insert It Inside The Modal, Uses Alt Text As Caption
+              var img = document.getElementById("mo2");
+              var modalImg = document.getElementById("img2");
+              var captionText = document.getElementById("caption2");
+
+              img.onclick = function()
+              {
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+              }
+
+              // Gets <span> Element That Closes Modal
+              var span = document.getElementsByClassName("close")[1];
+
+              // When Click On <span> (x) Closes Modal
+              span.onclick = function() {
+                  modal.style.display = "none";
+              }
+          </script>
+        </section>
+
+        <footer id="main-footer">
+          <p id="date"></p>
+          <div include-html="../footer/links.html"></div>
+        </footer>
+      </main>
+    </div>
+
+    <script>
+      includeHTML();
+
+      let text = document.lastModified;
+      document.getElementById("date").innerHTML = "Updated " + text;
+    </script>
+  </body>
+</html>
